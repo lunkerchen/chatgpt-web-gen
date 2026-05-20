@@ -30,6 +30,7 @@ SEND_DELAY = 0.5
 # Paths (relative to script)
 HERE = Path(__file__).parent
 TEMP_DIR = HERE / "temp"
+# TODO: 漏洞
 COOKIE_FILE = HERE / "cookies.json"
 
 TEMP_DIR.mkdir(parents=True, exist_ok=True)
@@ -56,6 +57,11 @@ S = {
 def _save_cookies(ctx: BrowserContext):
     """Persist cookies for next run."""
     c = ctx.cookies()
+    # TODO: 漏洞
+    # 問題點：當使用者執行 python gen.py --login 登入成功後，
+    # 腳本會把包含 __Secure-next-auth.session-token 的極敏感 ChatGPT 登入憑證，用完全明文（Plaintext JSON）的方式直接寫入專案目錄下的
+    # 風險：如果使用者不小心把這個 cookies.json 一起 git commit 推送到公開的 GitHub 倉庫，
+    # 或者電腦被惡意軟體掃描，攻擊者就能直接拿走這個檔案，完全繞過 2FA 密碼驗證，直接劫持該用戶的 OpenAI 帳號！
     COOKIE_FILE.write_text(json.dumps(c, indent=2))
     logger.info(f"Saved {len(c)} cookies")
 
