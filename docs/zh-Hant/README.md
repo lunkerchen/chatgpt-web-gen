@@ -1,20 +1,13 @@
-# ChatGPT Web Gen
+# 🎨 ChatGPT Web Gen
 
 **無需 API Key — 只用 ChatGPT Plus/Pro/Team 帳號，透過瀏覽器自動化生圖。**
 
-```bash
-pip install -r requirements.txt
-playwright install chromium
-python gen.py --login
-python gen.py "賽博龐克城市夜景，電影級畫質"
-python gen.py "把這個產品放到沙灘上" --ref product.png
-```
-
----
-
-🌐 **語言** — [English](../../README.md) · [日本語](../ja/README.md)
-
----
+[![Python](https://img.shields.io/badge/Python-3.10+-3776AB?logo=python&logoColor=white)](../../gen.py)
+[![Playwright](https://img.shields.io/badge/Playwright-Headless-45ba4b?logo=playwright)](https://playwright.dev)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](../../LICENSE)
+[![English](https://img.shields.io/badge/README-English-green.svg)](../../README.md)
+[![中文首頁](https://img.shields.io/badge/README-首頁-red.svg)](../../README.zh-TW.md)
+[![日本語](https://img.shields.io/badge/README-日本語-blue.svg)](../ja/README.md)
 
 ## 這是什麼？
 

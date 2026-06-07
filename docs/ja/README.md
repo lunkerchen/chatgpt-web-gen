@@ -1,20 +1,13 @@
-# ChatGPT Web Gen
+# 🎨 ChatGPT Web Gen
 
 **API キー不要 — ChatGPT Plus/Pro/Team アカウントだけで画像生成。**
 
-```bash
-pip install -r requirements.txt
-playwright install chromium
-python gen.py --login
-python gen.py "シネマティックなサイバーパンクシティ、夜"
-python gen.py "この商品をビーチに配置" --ref product.png
-```
-
----
-
-🌐 **言語** — [English](../../README.md) · [繁體中文](../zh-Hant/README.md)
-
----
+[![Python](https://img.shields.io/badge/Python-3.10+-3776AB?logo=python&logoColor=white)](../../gen.py)
+[![Playwright](https://img.shields.io/badge/Playwright-Headless-45ba4b?logo=playwright)](https://playwright.dev)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](../../LICENSE)
+[![English](https://img.shields.io/badge/README-English-green.svg)](../../README.md)
+[![中文首頁](https://img.shields.io/badge/README-首頁-red.svg)](../../README.zh-TW.md)
+[![繁體中文](https://img.shields.io/badge/README-繁體中文-blue.svg)](../zh-Hant/README.md)
 
 ## これは何？
 
