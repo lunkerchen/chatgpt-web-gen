@@ -1,0 +1,4 @@
+cloakbrowser>=0.3
+playwright>=1.40
+keyring
+cryptography

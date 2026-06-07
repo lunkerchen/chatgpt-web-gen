@@ -1,0 +1,24 @@
+chatgpt-web-gen — 不用 API Key 的圖片生成工具
+
+寫了一個小工具，用 ChatGPT Web 生圖，不需要 API Key。一句指令 → headless browser 自動登入 → 下載結果。
+
+底層用 CloakBrowser 開 stealth Chromium，直接繞過 Cloudflare 偵測，模擬真人操作 ChatGPT 網頁。
+
+#buildinpublic #ai #chatgpt #devtools
+
+---
+
+→ pip install 就搞定
+→ 支援以圖生圖（--ref 上傳參考圖）
+→ 單檔 Python，沒有 daemon 沒有 server
+→ 有 Telegram Bot 版，適合給團隊用
+
+安裝：
+pip install -r requirements.txt
+playwright install chromium
+python gen.py --login
+python gen.py "你的提示詞"
+
+github.com/lunkerchen/chatgpt-web-gen
+
+#buildinpublic #ai #chatgpt #devtools
